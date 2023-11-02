@@ -1,0 +1,18 @@
+/* styles.css */
+/* Add a border to the "about-section" */
+.about-section {
+    border: 2px solid #333; /* Adjust border properties as needed */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Rest of your CSS styles go here */
+.img-toronto{
+width: 200px;
+border:2px solid #333;
+padding: 20px;
+border-radius: 1px;
+
+}
+
