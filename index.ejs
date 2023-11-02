@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!--CSS files-->
+  
+  <link rel='stylesheet' href='/Content/app.css' />
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css//all.min.css"/>
+  <link rel="stylesheet" href="/aboutmestyless.css">
+</head>
+<body>
+
+<!--NavBar-->
+<!-- Grey with black text -->
+
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link active" href="#">INFR3120</a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link active" href="/Home">
+        <% if (title=="Home") { %>
+          <a class="nav-link active" href="/home">
+          <%} else {%>
+            <a class="nav-link" href="/home">
+          <% } %>
+            <i class="fa-solid fa-house"></i></i> Home</a>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/aboutme">
+        <% if (title=="About Me") { %>
+          <a class="nav-link active" href="/aboutme">
+          <%} else {%>
+            <a class="nav-link" href="/aboutme">
+          <% } %>
+        <i class="fa-solid fa-address-card"></i> About Me</a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/projects">
+        <% if (title=="Projects") { %>
+          <a class="nav-link active" href="/projects">
+          <%} else {%>
+            <a class="nav-link" href="/projects">
+          <% } %>
+        <i class="fa-solid fa-diagram-project"></i> Projects</a>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/contactme">
+        <% if (title=="Contact Me") { %>
+          <a class="nav-link active" href="/contactme">
+          <%} else {%>
+            <a class="nav-link" href="/contactme">
+          <% } %>
+        <i class="fa-solid fa-address-book"></i> Contact Me</a>
+      </li>
+
+        
+      </li>
+    </ul>
+  </div>
+</nav>
+<main>
+
+<!-- Footer -->
+
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand" href="#"> @2023 Ryan Chung</a>
+</nav>
+
+<!-- Black background with white text -->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">...</nav>
+
+<!-- Blue background with white text -->
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">...</nav>
+<!--Main Content-->
+
+<div class="jumbotron">
+  <h1>Welcome to the <%= title %> Page</h1>
+  <hr class="my-4">
+  <p class="lead"> <%= content %> </p>
+</div>
+
+  <!-- Script Files -->
+  <script src="/Script/app.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/jquery/dist/jquery.min.js"></script>
+
+<!-- Pages Configs-->
+
+<% if (title=="About Me") { %>
+
+<section class="about-section">
+        <img class="img-toronto" src="/assets/images/IMG_0285.jpg" alt="Ryan Chung" width="200"> 
+        <p> </p>            
+        <!-- Embedded Video -->
+        <video controls poster="WIN_20231001_15_45_48_Pro.mp4" width="500">
+            <source src="/assets/images/WIN_20231001_15_45_48_Pro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>   
+<%} else {%>
+<% } %>
+
+<% if (title=="Projects") { %>
+  <a href="/project1"></a>
+  <a href="/assets/images/project1.py"> BMI Calculator Python Code </a>
+
+  <p> <p>
+
+  <a href="/project2"></a>
+  <a href="/assets/images/project2.py">Bank Account Python Code</a>
+
+<%} else {%>
+            
+<% } %>
+
+<% if (title=="Contact Me") { %>
+            <form action="/submit" method="POST">
+              <label for="Full Name"> Full name: </label>
+              <input type="text" id="username" name="username" required>
+              <br>
+              <p> </p>
+              <label for="email"> Email:     </label>
+              <input type="Email" id="email" name="email" required>
+              <br>
+              <p> </p>
+              <label for="comments"> Comments: </label>
+              <input type="comments" id="comments" name="comments" required>
+              <br>
+              <p> </p>
+              <input type="submit" value="Submit">
+            </form>
+
+          <%} else {%>
+            
+          <% } %>
+
+<p class="lead">
+    <a class="btn btn-primary btn-lg" href="/contactme" role="button">Learn more</a>
+  </p>
+
+  
+</body>
+</html>
+
+
+
+
